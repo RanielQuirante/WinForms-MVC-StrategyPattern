@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace YouSourceApp.SortStrategy
 {
-    internal class QuickSortStrategy : ISortStrategy
+    class QuickSortStrategy : SortStrategy
     {
-        public string SortMethod(string InputText)
+        public override string Sort(string InputText)
         {
             string[] inputText = InputText.ToCharArray().Select(x => x.ToString()).ToArray();
 

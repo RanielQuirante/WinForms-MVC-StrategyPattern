@@ -16,7 +16,6 @@ namespace YouSourceApp
         static void Main()
         { 
             TextSorterView textSorterView = new TextSorterView();
-
             TextSorterController textSorterController = new TextSorterController(textSorterView);
             textSorterView.ShowDialog();
         }

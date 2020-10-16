@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace YouSourceApp.SortStrategy
 {
-    internal interface ISortStrategy
+    abstract class SortStrategy
     {
-        string SortMethod(string InputText);
+        public abstract string Sort(string InputText);
     }
 }
