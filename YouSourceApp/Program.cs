@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YouSourceApp.Controller;
 
 namespace YouSourceApp
 {
@@ -13,10 +14,12 @@ namespace YouSourceApp
         /// </summary>
         [STAThread]
         static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+        { 
+            TextSorterView textSorterView = new TextSorterView();
+
+            TextSorterController textSorterController = new TextSorterController(textSorterView);
+            textSorterView.ShowDialog();
         }
+
     }
 }
