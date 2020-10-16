@@ -46,11 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="View\Form1.cs">
+    <Compile Include="Controller\ITextSorterView.cs" />
+    <Compile Include="Controller\TextSorterController.cs" />
+    <Compile Include="Model\ComboBox.cs" />
+    <Compile Include="Model\SortingStrategy.cs" />
+    <Compile Include="Model\TextSorter.cs" />
+    <Compile Include="SortStrategy\BubbleSortStrategy.cs" />
+    <Compile Include="SortStrategy\ISortStrategy.cs" />
+    <Compile Include="SortStrategy\QuickSortStrategy.cs" />
+    <Compile Include="View\TextSorterView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\TextSorterView.Designer.cs">
+      <DependentUpon>TextSorterView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +71,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\TextSorterView.resx">
+      <DependentUpon>TextSorterView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -76,9 +87,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
