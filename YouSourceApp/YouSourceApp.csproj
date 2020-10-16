@@ -52,7 +52,8 @@
     <Compile Include="Model\SortingStrategy.cs" />
     <Compile Include="Model\TextSorter.cs" />
     <Compile Include="SortStrategy\BubbleSortStrategy.cs" />
-    <Compile Include="SortStrategy\ISortStrategy.cs" />
+    <Compile Include="SortStrategy\SortedText.cs" />
+    <Compile Include="SortStrategy\SortStrategy.cs" />
     <Compile Include="SortStrategy\QuickSortStrategy.cs" />
     <Compile Include="View\TextSorterView.cs">
       <SubType>Form</SubType>

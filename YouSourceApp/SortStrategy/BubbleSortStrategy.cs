@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace YouSourceApp.SortStrategy
 {
-    internal class BubbleSortStrategy : ISortStrategy
+    class BubbleSortStrategy : SortStrategy
     {
-        public string SortMethod(string InputText)
+        public override string Sort(string InputText)
         {
             string[] inputTextArray = InputText.ToCharArray().Select(x => x.ToString()).ToArray();
             for (int j = 0; j <= inputTextArray.Length - 2; j++)

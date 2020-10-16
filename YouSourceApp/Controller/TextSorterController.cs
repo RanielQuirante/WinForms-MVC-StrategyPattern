@@ -25,17 +25,18 @@ namespace YouSourceApp.Controller
 
         public void SortText(int sortIndex)
         {
-            ISortStrategy selectStrategy;
+            SortedText inputText = new SortedText();
+
             switch (sortIndex)
             {
                 case (int)SortingStrategy.BubbleSort:
-                    selectStrategy = new BubbleSortStrategy();
-                    this._view.OutputText = selectStrategy.SortMethod(this._view.InputText);
+                    inputText.SetSortStrategy(new BubbleSortStrategy());
+                    this._view.OutputText = inputText.Sort(this._view.InputText);
                     break;
 
                 case (int)SortingStrategy.QuickSort:
-                    selectStrategy = new QuickSortStrategy();
-                    this._view.OutputText = selectStrategy.SortMethod(this._view.InputText);
+                    inputText.SetSortStrategy(new QuickSortStrategy());
+                    this._view.OutputText = inputText.Sort(this._view.InputText);
                     break;
 
                 default:
